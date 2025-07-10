@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Booking View</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #statsModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #statsModal .modal-content {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    #statsModal h2 {
+      margin-top: 0;
+    }
+    #statsModal ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #statsModal ul li {
+      padding: 6px 0;
+      font-size: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    #closeStatsBtn {
+      margin-top: 15px;
+      padding: 8px 15px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #showStatsBtn {
+      margin: 15px 0;
+      padding: 8px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Admin Booking Records</h1>
+
+  <label for="filterRange">Filter by:</label>
+  <select id="filterRange">
+    <option value="today">Today</option>
+    <option value="week" selected>This Week</option>
+    <option value="month">This Month</option>
+    <option value="3months">Last 3 Months</option>
+    <option value="6months">Last 6 Months</option>
+    <option value="year">This Year</option>
+    <option value="all">All Time</option>
+  </select>
+
+
+  <table id="bookingTable">
+    <thead>
+      <tr>
+        <th>Seat No</th>
+        <th>Booking Date</th>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Emp ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Show Stats Button -->
+  <button id="showStatsBtn">Show Stats</button>
+</div>
+
+<!-- Stats Modal -->
+<div id="statsModal">
+  <div class="modal-content">
+    <h2>Booking Statistics</h2>
+    <ul id="statsList"></ul>
+    <button id="closeStatsBtn">Close</button>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
