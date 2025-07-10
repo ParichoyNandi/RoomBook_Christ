@@ -6,7 +6,7 @@ const statsList = document.getElementById('statsList');
 const closeStatsBtn = document.getElementById('closeStatsBtn');
 
 // const server_url = "http://localhost:3000/api";
-const server_url = "https://swlb.christuniversity.in:3000/api"; // Production URL
+const server_url = "https://swlb.christuniversity.in/api"; // Production URL
 
 let cachedStats = {}; // store latest stats for modal
 

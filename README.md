@@ -18,7 +18,7 @@ CREATE TABLE bookings (
 
 
 
-LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\Employee_data.csv'
+LOAD DATA INFILE 'Employee_data.csv'
 INTO TABLE seat_booking_system.employees
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 

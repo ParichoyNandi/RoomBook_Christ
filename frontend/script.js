@@ -10,7 +10,7 @@ const confirmBookingBtn = document.getElementById('confirmBooking');
 const closeModalBtn = document.getElementById('closeModal');
 
 // const server_url = "http://localhost:3000/api";
-const server_url = "https://swlb.christuniversity.in:3000/api"; // Production URL
+const server_url = "https://swlb.christuniversity.in/api"; // Production URL
 
 let selectedSeat = null;
 let selectedDate = null;
